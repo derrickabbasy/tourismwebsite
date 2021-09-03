@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Liverpool Essential</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		/* For styling specific to this page */
+		<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+		
+		body, html {
+		  height: 100%;
+		  line-height: 1.8;
+		  font-size: 15px;
+		}
+		/* Full height image header */
+		.bgimg-4 {
+		  background-position: center;
+		  background-size: cover;
+		  background-image: url("IluminateLC.jpg");
+		  min-height: 100%;
+		}
+		.w3-greyscale-min, .w3-grayscale-min {
+			filter: none;
+		}
+		.w3-bar .w3-button {
+			padding: 16px;
+		}
+		.L1 {
+			border: 1px solid black;
+		}
+		
+		* {box-sizing: border-box}
+		body {font-family: Verdana, sans-serif; margin:0}
+		.mySlides {display: none}
+		img {vertical-align: middle;}
+
+		/* Slideshow container */
+		.slideshow-container {
+		  max-width: 1000px;
+		  position: relative;
+		  margin: auto;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
+
+		/* Caption text */
+		.text {
+		  color: #f2f2f2;
+		  font-size: 15px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  bottom: 8px;
+		  width: 100%;
+		  text-align: center;
+		}
+
+		/* Number text (1/4 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+		  cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+
+		.active, .dot:hover {
+		  background-color: #717171;
+		}
+
+		/* Fading animation */
+		.fade {
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .prev, .next,.text {font-size: 11px}
+		}
+		.L2 {
+			border: 1px solid black;
+		}
+		.L3 {
+			border:  1px solid black;
+		}
+		.w3-row-padding {
+			text-align: justify;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<!-- Navbar (sit on top) --> 
+		<div class="w3-top">
+		  <div class="w3-bar w3-white w3-card" id="myNavbar">
+			<a class="w3-bar-item w3-button w3-wide" href="index.html"><img src="Logo.png"  width="75" height="75" alt="" /></a>
+			
+			<!-- Right-sided navbar links -->
+			<div class="w3-right w3-hide-small">
+			  <a href="inspiration.html" class="w3-bar-item w3-button"><i class="fa fa-star"></i>INSPIRATION</a>
+			  <a href="discover liverpool.html" class="w3-bar-item w3-button"><i class="fa fa-cc-discover"></i> DISCOVER LIVERPOOL</a>
+			  <a href="liverpool essential.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> LIVERPOOL ESSENTIAL</a>
+			  <a href="plan.html" class="w3-bar-item w3-button"><i class="fa fa-pencil"></i>PLAN</a>
+			</div>
+			
+			
+			<!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+		</div>
+		
+		
+		<!-- Header with full-height image -->
+		<header class="bgimg-4 w3-display-container w3-grayscale-min" id="liverpool essential">
+		  <div class="w3-display-left w3-text-white" style="padding:48px">
+			<span class="w3-jumbo w3-hide-small">The essential part you need</span><br>
+			<span class="w3-xxlarge w3-hide-large w3-hide-medium">Start exploring the important places</span><br>
+			<span class="w3-large">You will be amazed of what Liverpool can offer to you</span>
+			<p><span class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Lets Go On Vacation 2day</a></p>
+		  </div> 
+		  <div class="w3-display-bottomleft w3-text-black w3-large" style="padding:24px 48px">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+		  </div> 
+		</header>
+		
+		<audio controls>
+		  <source src="Vacation.mp3">
+		</audio>
+		
+		<div class="w3-container  w3-center"  id="liverpool essential">
+			<hr>
+				<h3>Accommodation</h3>
+			
+			<div class="w3-row-padding">
+				<div class="w3-half w3-margin-bottom">
+					<img src="TuneHotelLiverpool.jpg"  style="width:100%">
+					<div class="w3-container w3-white">
+						<h3><b>THE TUNE HOTEL ES</b></h3>
+						<p>Address: 3 - 19 Queen Building, Castle Street, Liverpool, Liverpool City Region, L2 4XE</p>
+						<p>Tel: +44(0)151 239 5070</p>
+						<p>Price is from £37.00</p>
+						
+						<p>Public parking is possible at a location nearby (reservation not needed)
+						and charges are applicable. Please contact Tune Hotel Liverpool team for 
+						details. Based in the Centre of Liverpool, Tune Hotel Liverpool is just a short
+						walk from the town centre and Liverpool Lime Street Station</p>
+					</div>
+				</div>
+				<div class="w3-half w3-margin-bottom">
+					<img src="LeasoweCastleHotel.jpg"  style="width:100%">
+					<div class="w3-container w3-white">
+						<h3><b>LEASOWE CASTLE HOTEL</b></h3>
+						<p>Address: Leasowe Road, Moreton, Merseyside, CH46 3RF</p>
+						<p>Tel: 0151 606 9191</p>
+						<p>Price from £55.00Per room (breakfast included) to £1,000.00 Per person (breakfast included)</p>
+						
+						<p>Leasowe Castle, dating back to 1593, has recently been sympathetically refurbished
+						to retain its great historical character. Located on the Wirral Peninsula many rooms 
+						in the castle have superb coastal views and views of Leasowe Golf Course. There are 50
+						comfortably furnished en-suite guest bedrooms with movies on demand, data port, trouser
+						press or iron and ironing board and tea/coffee making facilities. Additionally, two 
+						four-poster honeymoon suites and a well equipped health club. The location is convenient,
+						only three minutes from Junction 1 of the M53, about the same distance from Leasowe Rail
+						station and Liverpool John Lennon Airport is a short ride away. Leasowe Castle is 
+						renowned as a venue for weddings and celebrations; a variety of suites are available for
+						rbetween 20 and 250 guests, or up to 400 guests for an exhibition. Tranquil grounds of 6
+						acres surround the Castle, with parking for 250 vehicles.</p>
+
+
+					</div>
+				</div>
+				<div class="w3-half w3-margin-bottom">
+					<img src="MarriottHotel.jpg"  style="width:100%">
+					<div class="w3-container w3-white">
+						<h3><b>LIVERPOOL MARRIOTT HOTEL CITY CENTRE</b></h3>
+						<p>Address: 1 Queen Square, Liverpool, Merseyside, L1 1RH</p>
+						<p>Tel: 0151 476 8000</p>
+						<p>Price from £109.00 Per room (room only) to £129.00 Per room (breakfast included)</p>
+						
+						<p>The  Marriott Hotel City Centre of Liverpool is one of the perfectly and ieadlly positioned 
+						hotel in the heart of the cultural district in Liverpool, close to the main shopping centre 
+						and it is opposite Lime Street station. It is with a streamline but stylish features
+						gives this modern city-centre hotel the edge. It consists of 146 bedrooms including 3 penthouse
+						suites and  full leisure facilities which include indoor swimming pool, fully equipped gymnasium, 
+						relaxation zone and steam room.  7 dedicated conference & meeting rooms can catering for up to
+						300 delegates. The Lounge Bar offers light snacks, meals and coffee terrace. The 
+						Marriott hotel experience promises that whether you’re staying on business or for leisure.
+						The warm welcome may be the first thing you notice but it won’t be the last.</p>
+
+					</div>
+				</div>
+				<div class="w3-half w3-margin-bottom">
+					<img src="Richmondhotel.jpg"  style="width:100%">
+					<div class="w3-container w3-white">
+						<h3><b>RICHMOND HOTEL</b></h3>
+						<p>Address: Hatton Garden, Liverpool, Merseyside, L3 2AN</p>
+						<p>Tel: 0151 236 1220</p>
+						<p>Price from £79.00 to £199.00 Per room (room only)</p>
+						
+						<p>You Indulge in luxury at the Richmond Apart Hotel in Liverpool. It is prestigiously located in 
+						the city’s Hatton Garden area, the Richmond boasts 152 luxurious hotel rooms, all of
+						which can be sectioned into 52 apartments. It is whether you’re looking for a 3 bedroom 
+						apartment for a city break with friends, or you’re in pursuit of a luxury hideaway for a
+						romantic weekend away from hectic life, the Richmond guarantees a prestige level of service 
+						& satisfaction offer. We believe that with our apart-hotel located in Liverpool, you can take your luxury 
+						accommodation to a whole new level. Apart hotels are a fantastic choice which is perfctly for large 
+						groups and	special occasions, providing guests with numerous benefits such as private accommodation, spacious
+						rooms, and a central location. Booking an apartment will offer you incredible value for 
+						money and provide you with the flexibility to feel like you’re at home.</p>
+					</div>
+				</div>
+				<div class="w3-half w3-margin-bottom">
+					<img src="IbisHotel.jpg"  style="width:100%">
+					<div class="w3-container w3-white">
+						<h3><b>IBIS LIVERPOOL ALBERT DOCK</b></h3>
+						<p>Address: 27 Wapping, Liverpool, Merseyside, L1 8LY</p>
+						<p>Tel: 0151 706 9800</p>
+						<p>Price from £59.00 Per room (room only</p>
+						
+						<p>The Hotel Ibis Liverpool Albert Dock is situated in the centre of this beautiful city. It is ideally located for
+						business or leisure and is just a short stroll away from the main tourist attractions of the
+						Albert Dock. Many of the 127 double bedrooms boast spectacular views of Liverpool's 
+						Waterfront. The modern comfortable bedrooms (including 8 disabled bedrooms) all have en-suite
+						bathrooms, air cooling, tea and coffee making facilities, direct dial telephone, some modern 
+						sockets, Wi-Fi, car park for guests (charge) and lastly satellite television. A room with ironing 
+						facilities is also available for use by the guest. With a great location conveniently located
+						for shopping in Liverpool ONE and access to the business areas of the city, the Hotel Ibis 
+						Liverpool is the perfect choice for any type of stay in the "pool of life".
+					</div>
+				</div>
+				<div class="w3-half w3-margin-bottom">
+					<img src="IndigoHotel.jpg"  style="width:100%">
+					<div class="w3-container w3-white">
+						<h3><b>HOTEL INDIGO LIVERPOOL</b></h3>
+						<p>Address: Chapel Street, Liverpool, Merseyside, L3 9AG</p>
+						<p>Tel: 0151 559 0111</p>
+						<p>Price is from £89.00 to £159.00 Per room (room only)</p>
+						
+						<p>The Hotel Indigo Liverpool isn’t just another ordinary type of hotel to stay.
+						It’s anintriguing, inclusive, inspiring experience specifically designed 
+						for some travellers who aspire to something more than run of the mill 
+						accommodations. It is situated in Liverpool City Centre where it offers 151 
+						bedrooms coupled with excellent facilities. The hotel features cosy,
+						airy and inviting guestrooms with oversized beds, plush bedding with
+						throw pillows, hard-surface flooring with area rugs and signature
+						murals.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr class="L1">
+		
+		<div class="Mysection">
+		<h1><b>Things To Do</b></h1>
+		
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <div class="numbertext">1 / 4</div>
+					  <img src="Aquariumliverpool.jpg" style="width:100%">
+					  <div class="text">Blue Planet Aquarium</div>
+					  <p><b>Blue Planet Aquarium</b></p>
+					  <p>Get up close to Awesome Sharks at Blue Planet Aquarium and see real scuba divers
+					  in our daily feed shows in the Aquatheatre. With one of the best collections of 
+					  Sharks, Fish, Frogs, Spiders and Otters. Guided price which is for  Standard (13yrs+)
+					  £19.00 Concession £16.50, Junior (over 90cms but under 13 years) £13.50,Family 2+2
+					  £64.00,Groovy Grandparents (2+2) £60.00Online tickets discounted by 10%. The open 
+					  times which is Monday - Friday	10:00	 - 17:00*,
+					  Saturday - Sunday	10:00	 - 18:00*,
+					  * Weekdays 10am – 5pm, Weekends & School Hols – 10am – 6pm
+					  The dates and timeswhich has marked with a '*' are provisional and may be subject to change</p>
+					   
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">2 / 4</div>
+					  <img src="chesterzoo.jpg" style="width:100%">
+					  <div class="text">Wildlife & Zoo</div>
+					  <p><b>Wildlife & Zoo</b></p>
+					  <p>Chester Zoo emplyees work hard because they love animals, they care about nature, they love Chester Zoo
+					  and they want to be the best conservation charity in the world wide! And they're passionate
+					  about what they are doing. Whether it's creating a brilliant day out for you, or working 
+					  with endangered wildlife around the world, they couldn't do it without your help.
+					  They open daily from 10am all year, except Christmas Day and Boxing Day. You can also
+					  park for free means you dont have to pay for the parking fee!!, or come by train, bus or bicycle. 
+					  (Cyclists get 15% off their tickets!). If you are  interested and would like to speak to someone from our
+					  Guest Services team please call 01244 380280. If yourenquiry relates to GDPR or you wish to exert any of your
+					  Rights under GDPR please contact  GDPR.enquiries@chesterzoo.org.</p>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">3 / 4</div>
+					  <img src="Balticmarket.jpg" style="width:100%">
+					  <div class="text">Market</div>
+					  <p><b/>Market</b></p>
+					  <p>Every week, from Thursday to Sunday, dabble and sample the very best of
+					  Liverpool's independent foodie vendors will be giving you a delicious taste of the city's 
+					  ever-growing indie food scene. It is set in one of the warehouses of the old Cains 
+					  Brewery in the Baltic Triangle, it's the perfect addition to the up-and-coming 
+					  trendy part of town that everyone wants a piece of when they come to visit. Get 
+					  your hands on everything from halloumi dogs and waffle fries from Meet Frank to the 
+					  melt-in-the-mouth modern small plates from Oktopus (we recommend the popcorn mussels
+					  - delicious). Head to the bar for a variety of drink options to wash it all down too.
+					  With more traders expected to fill the market in the future, don't leave it too long
+					  until your next trip. If you're heading here on a Sunday, perfect - the Baltic Market
+					  regularly hosts arts & crafts and farmer's markets, so every weekend is different from
+					  the last.</p>
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">4 / 4</div>
+					  <img src="stgeorgehall.jpg" style="width:100%">
+					  <div class="text">History & Heritage</div>
+					  <p><b>History & Heritage</b></p>
+					  <p> It is situated opposite Lime Street station, where the St George’s Hall provides a
+					  warm and beautiful  welcome to Liverpool, reflecting the pride and passion of the Victorians who built
+					  this land-mark venue. The hall is also one of the finest examples of a neoclassical  building in the
+					  world and it stands majestically over the city skyline. It is opened in 1854 and the 
+					  outstanding expression of the confidence and ambition the  Liverpool people had for their city, their
+					  delight in profiling their achievements is particularly personified by the remarkble
+					  design  of the Concert Room and the  grandeur of The Great Hall. Those who designed, built
+					  and funded for this extraordinary  building, sought deliberately to lift the human heart.</p>
+					  
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+					<br>
+
+					<div style="text-align:center">
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					  <span class="dot" onclick="currentSlide(4)"></span> 
+					</div>
+				</div>
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			  } 
+		</script> 
+		
+		<hr class="L2">
+		
+		<div class="lastsection">
+		<h1>3 Best Spot In Liverpool</h1>
+			<div class="w3-row-padding w3-padding-16">
+			<div class="w3-third w3-margin-bottom">
+			<h1><b>Breakfast Spot</b></h1>
+			  <img src="Breakfast.jpg"  style="width:100%">
+			  <div class="w3-container w3-white">
+				<p>(1)Bill’s Liverpool Restaurant</p>
+				
+				<p>(2)Moose Coffee</p>
+				
+				<p>(3)The Tavern Co</p>
+			  </div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+			<h1><b>Music Venues</b></h1>
+			  <img src="MusicVenues.jpg" style="width:100%">
+			  <div class="w3-container w3-white">
+				<p>(1)Zanzibar club</p>
+				
+				<p>(2)Arts Club</p>
+				
+				<p>(3)Kazimier Garden</p>
+			  </div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+			<h1><b>Rooftop Bars</b></h1>
+			  <img src="Rooftopbars.jpg" alt="Norway" style="width:100%">
+			  <div class="w3-container w3-white">
+				<p>(1)White Star</p>
+				
+				<p>(2)Hus</p>
+				
+				<p>(3)The Attic Bar</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<hr class="L3">
+		
+		
+		
+		<!-- footer -->
+		<div class="w3-row w3-section">
+		  <div class="w3-third w3-container w3-black w3-large" style="height:400px">
+			<h2>Schedule With Us</h2>
+			<p><i class="fa fa-map-marker" style="width:30px"></i> 120 Ribblers Ln, Liverpool L32 7RB, UK</p>
+			<p><i class="fa fa-phone" style="width:30px"></i> Phone:  + 01 234 567 88</p>
+			<p><i class="fa fa-envelope" style="width:30px"> </i> Email: derrick@gmail.com</p>
+		  </div>
+		  <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:400px">
+			<h2>Summary About Us</h2>
+			<p>Visit2day company is tourist oriented company where promote and introduce our best service as a guidance for Liverpool tourist who has the keen of interest  visiting Liverpool.</p>
+			<p>Visit2day company offers a various of places for tourist to visit for 2 day and help them meet their standard of satisfaction and go beyond their expectation.</p>
+		  </div>
+		  <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:400px">
+			<h2>Follow Us</h2>
+			<i class="w3-xlarge fa fa-facebook-official"></i><br>
+			<i class="w3-xlarge fa fa-pinterest-p"></i><br>
+			<i class="w3-xlarge fa fa-twitter"></i><br>
+			<i class="w3-xlarge fa fa-flickr"></i><br>
+			<i class="w3-xlarge fa fa-linkedin"></i>
+		  </div>
+		</div>
+		<!-- Copyright -->
+		<b><div class="footer-copyright text-center py-3">© Visit2Day2019 Copyright</div></b>
+	</body>
+</html>
+		
+		

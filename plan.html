@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Plan</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		/* For styling specific to this page */
+		<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+		
+		body, html {
+		  height: 100%;
+		  line-height: 1.8;
+		  font-size: 15px;
+		}
+		/* Full height image header */
+		.bgimg-5 {
+		  background-position: center;
+		  background-size: cover;
+		  background-image: url("Plannnd.jpg");
+		  min-height: 100%;
+		}
+		.w3-greyscale-min, .w3-grayscale-min {
+			filter: none;
+		}
+		.w3-bar .w3-button {
+			padding: 16px;
+		}
+		*,
+		*::before,
+		*::after {
+		  box-sizing: border-box;
+		}
+		.Mycard {
+		  color: #999999;
+		  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		  font-style: normal;
+		  font-weight: 400;
+		  letter-spacing: 0;
+		  padding: 1rem;
+		  text-rendering: optimizeLegibility;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  -moz-font-feature-settings: "liga" on;
+		  text-align: justify;
+		}
+		img {
+		  height: auto;
+		  max-width: 100%;
+		  vertical-align: middle;
+		}
+		.cards {
+		  display: flex;
+		  flex-wrap: wrap;
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+		.cards__item {
+		  display: flex;
+		  padding: 1rem;
+		}
+		@media (min-width: 40rem) {
+		  .cards__item {
+			width: 50%;
+		  }
+		}
+		@media (min-width: 56rem) {
+		  .cards__item {
+			width: 33.3333%;
+		  }
+		}
+		.card {
+		  background-color: white;
+		  border-radius: 0.25rem;
+		  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+		  display: flex;
+		  flex-direction: column;
+		  overflow: hidden;
+		}
+		.card:hover .card__image {
+		  -webkit-filter: contrast(100%);
+				  filter: contrast(100%);
+		}
+		.card__content {
+		  display: flex;
+		  flex: 1 1 auto;
+		  flex-direction: column;
+		  padding: 1rem;
+		}
+		.card__image {
+		  background-position: center center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  border-top-left-radius: 0.25rem;
+		  border-top-right-radius: 0.25rem;
+		  -webkit-filter: contrast(70%);
+				  filter: contrast(70%);
+		  overflow: hidden;
+		  position: relative;
+		  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		}
+		.card__image::before {
+		  content: "";
+		  display: block;
+		  padding-top: 56.25%;
+		}
+		@media (min-width: 40rem) {
+		  .card__image::before {
+			padding-top: 66.6%;
+		  }
+		}
+		.card__image--offer {
+		  background-image: url("specialoffer.jpg");
+		}
+		.card__image--smartphoneapps {
+		  background-image: url("smartphone.jpg");
+		}
+		.card__image--waterfront {
+		  background-image: url("Waterfront.jpg");
+		}
+		.card__image--weather {
+		  background-image: url("weather.png");
+		}
+		
+		.card__title {
+		  color: #696969;
+		  font-size: 1.25rem;
+		  font-weight: 300;
+		  letter-spacing: 2px;
+		  text-transform: uppercase;
+		}
+		.card__text {
+		  flex: 1 1 auto;
+		  font-size: 0.875rem;
+		  line-height: 1.5;
+		  margin-bottom: 1.25rem;
+		}
+		.NL1 {
+			border: 1px solid black;
+		} 
+		.NL2 {
+			border: 1px solid black;
+		}
+		.NL3 {
+			border: 1px solid black;
+		}
+		.NL4 {
+			border: 1px solid black;
+		}
+		.w3-row-padding w3-padding-64 w3-theme-l1 {
+			text-align: justify;
+		}
+		.twoSection {
+			text-align: justify;
+		}
+		.w3-row {
+			text-align: justify;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<!-- Navbar (sit on top) --> 
+		<div class="w3-top">
+		  <div class="w3-bar w3-white w3-card" id="myNavbar">
+			<a class="w3-bar-item w3-button w3-wide" href="index.html"><img src="Logo.png"  width="75" height="75" alt="" /></a>
+			
+			<!-- Right-sided navbar links -->
+			<div class="w3-right w3-hide-small"> 
+			  <a href="inspiration.html" class="w3-bar-item w3-button"><i class="fa fa-star"></i>INSPIRATION</a>
+			  <a href="discover liverpool.html" class="w3-bar-item w3-button"><i class="fa fa-cc-discover"></i> DISCOVER LIVERPOOL</a>
+			  <a href="liverpool essential.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> LIVERPOOL ESSENTIAL</a>
+			  <a href="plan.html" class="w3-bar-item w3-button"><i class="fa fa-pencil"></i>PLAN</a>
+			</div>
+			
+			
+			<!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+		</div>
+		
+		
+		<!-- Header with full-height image -->
+		<header class="bgimg-5 w3-display-container w3-grayscale-min" id="plan">
+		  <div class="w3-display-left w3-text-white" style="padding:48px">
+			<span class="w3-jumbo w3-hide-small">Organize everything you need</span><br>
+			<span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+			<span class="w3-large">Enjoy the range of cosmopolitan, natural and heritage experiences in Liverpool</span>
+			<p><span class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Lets Go On Vacation 2day</a></p>
+		  </div> 
+		  <div class="w3-display-bottomleft w3-text-black w3-large" style="padding:24px 48px">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+		  </div> 
+		</header>
+		
+		<audio controls>
+		  <source src="Vacation.mp3">
+		</audio>
+		
+		<div class="w3-container  w3-center"  id="plan">
+			<hr>
+				<h3><b>Plan Your Trip</b></h3>
+				<div class="Mycard">
+		
+
+					<ul class="cards">
+					  <li class="cards__item">
+						<div class="card">
+						  <div class="card__image card__image--offer"></div>
+						  <div class="card__content">
+							<div class="card__title">Offers</div>
+							<p class="card__text">If you’re looking for a bargain, planning a celebratory meal
+							or simply want to treat yourself, then don’t miss a chance to contact our company with
+							all the latest Visit2Day offers, discounts and packages. From  the cocktails to 
+							lunch time specials and one off deals, here you’ll find a wide variety of offers
+							from all of your favourite stores and restaurants, available in one location for
+							your convenience.So take advantage of a never-ending happy hour; delight in 2-4-1 
+							deals and make the most of a Visit2Day discount across a whole host of your much 
+							loved purchases. Our fantastic offers has it on every year, however, many are one
+							offs, so be sure to keep checking back to us for updates to find the perfect deal
+							for every visit! Further details contact us at + 01 234 567 89 or 
+							Email us : aderrick966@gmail.com</p>
+						  </div>
+						</div>
+					   </li>
+					   <li class="cards__item">
+						<div class="card">
+						  <div class="card__image card__image--smartphoneapps"></div>
+						  <div class="card__content">
+							<div class="card__title">Smartphone Apps For Travelling</div>
+							<p class="card__text">Even for a non-techie, the world of mobile apps can be a genuinely 
+							exciting one. This are some travel app which will be useful for your own need.</p>
+							
+							<p>(1) Skyscanner Train Travel app. It isan very easy, whihc is intuitive to use and on top
+							of that you will not get charged on booking fees for using the app. The favourite features
+							of the app by liverpool locals  are the fact that you can save your credit card details, allow you to
+							buy tickets with minimum fuss. Moreover, when you look at the results, the app 
+							highlights the cheapest times to travel and  the fastest route. Other cool
+							money saving features which include the handy ‘Groupsave’ pop-up whereby it will show on your
+							screen everytime when you book fares for more than 3 people. The groupsave function allows 
+							you to save upto 34% on your train fare so its for features like this that make
+							you really love the Skyscanner Trains app.</p>
+							
+							<p>(2) AroundMe app. If you want to find the nearest ATM machine or petrol station?
+							AroundMe is there to help you because it identifies your GPS position and will help you discover the nearest bank,
+							bar, petrol station station, hospital, hotel, movie theatre, restaurant, 
+							supermarket, theatre and taxi. It is fast, easy and accurate. Around me is 
+							more likely your day to day companion which quickly find out information about your surroundings.</p>
+							
+							<p>(3) UK Bus Checker app. When you has the UK Bus Checker you can travel from A to B in
+							UK with ease and no pressye. The app brings you smart journey planning, live transit times, and
+							detailed route maps for all of Great Britain.</p>
+							
+							<p>(4) Met Office’s app. Do you need the weather forecast? The Met Office’s forecasts 
+							can be a hit and miss affair but nevertheless their official weather app  is 
+							still a handy app for those visiting the UK.</p>
+							
+							<p>(5) ViaMichelin app. No matter if you are planning for a weekend trip or a 
+							long vacation in the UK, ViaMichelin and its user-friendly app offers you the 
+							luxury of optimizing your route based on traffic conditions. This app is a great
+							option if you want to wander around the streets, free spirited. It helps you
+							keep track of the real time traffic and assists you in reaching your destination
+							at the right time</p>
+							
+							<p>(6) Uber</p>
+						  </div>
+						</div>
+					   </li>
+					   <li class="cards__item">
+						<div class="card">
+						  <div class="card__image card__image--weather"></div>
+						  <div class="card__content">
+							<div class="card__title">Weather</div>
+							<p class="card__text">Liverpool has an temperate maritime climate with typically
+							warm temperature rather than hot summers  and cool temperature rather than cold winters. Liverpool rarely 
+							had the  or undergone an experiences of very extreme weather meaning Liverpool can be visited throughout the year.
+							On an average the hottest month is August which is in summer and the coldest is January
+							which is in winter. The Rainfall is evenly spread throughout the year, Liverpool can 
+							experience rain throughout the year. It is located in the North West of England the average 
+							temperature in Liverpool can be a few degrees cooler than is the case for the South of 
+							England. The weather in UK is unpredictable and it is possible to see elements of all four 
+							seasons in one day. The city may experience some snowfall in the winter although the heavy and 
+							sustained snowfall in the city is rare. It is advisable for visitors to initially check the weather 
+							forecast before they arrive in Liverpool or planning to come to liverpool, to get a better idea of the sort of clothing they 
+							will need during their trip. If it is what dry weather is what you’re after, the months with the
+							lowest chance of significant precipitation in Liverpool are April followed by March and then June.
+							In Liverpool you have to take note that we define “significant precipitation” as .1 inches or more in this section. It has the
+							lowest chance of rain or snow occurs around mid April. For instance, on the week of April 16th
+							there are no days of precipitation on average. In contrast, it’s most likely to rain or snow
+							in the early of November with an average of 3 days of significant precipitation the week of November 5th.</p>
+							
+							<p> Winter are the days which are at their shortest and the temperature at the coolest.
+							From December to February the average daytime temperatures are between 6°C and 8°C.</p>
+							
+							<p>Spring are the best climate  becaise it is milder in spring making it a good time to visit Liverpool.
+							There can be some great sunny days which mixed with cooler and wet weather. From March to May
+							the average daytime temperatures are between 9°C and 16°C.</p>
+							
+							<p>	In Liverpool most of the days in summer range from mild to warm with the possibility of some hotter days,
+							the days are at their longest sometimes in summer with daylight lasting well in to the evenings. 
+							From June to August the average daytime temperatures are between 17°C and 20°C.</p>
+							
+							<p>The climate can be vary from some pleasantly mild days particularly at the start of 
+							September to cooler and colder days in October and November. In Liverpool autumn is a good time to
+							visit Liverpool because it avoids the peak summer tourist season whilst still having milder
+							temperatures and longer hours of daylight which is particularly in September. From September to
+							November the average daytime temperatures are between 9°C and 17°C.</p>
+						 </div>
+						</div>
+					   </li>
+					</ul>
+				</div>
+		</div>
+		
+		<hr class="NL1">
+		
+			<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="Around">
+
+				<div class="w3-quarter">
+					<h2>Roadtrips</h2>
+					<p>Travel across Liverpool and experience the region's stunning landscapes, historic towns and renowned food and wine. The state's compact size means you can travel from high in the mountains to the rugged southern coast and back to the city in just a short space of time. So hit the road on a touring route, make your own way around, or follow an itinerary and see the wonders of Liveerpool for yourself.</p>
+				</div>
+
+				<div class="w3-quarter">
+				<div class="w3-card w3-white">
+				  <img src="LakeDistrictNationalPark.jpg"  style="width:100%">
+				  <div class="w3-container">
+				  <h3><b>Lake District National Park</b></h3>
+				  <p>It would be impossible to mention day trips from Liverpool without discussing
+				  the nearest national parks. In Liverpool the Lake District is one of the largest in England and 
+				  offers breathtaking skylines, stunning natural habitats and of course, beautiful
+				  lakes. For further exploration, Derwentwater and Windermere are well worth a
+				  visit thanks to their admirable mountains and scenery.</p>
+				 
+				  </div>
+				</div>
+				</div>
+
+				<div class="w3-quarter">
+				<div class="w3-card w3-white">
+				  <img src="RuffordOldHall.jpg"  style="width:100%">
+				  <div class="w3-container">
+				  <h3><b>Rufford Old Hall</b></h3>
+				  <p>Rufford Old Hall is located at a 34-minute drive from Liverpool. This Tudor
+				  building was the home of the Hesketh family and has 500 years of history. Its
+				  houses the Edwardian gardens, Squirrel Border, the South Lawn, Orchard Paddock,
+				  the North Paddock, and you’ll have the chance to see the beautiful blooming nepeta,
+				  roses, wisteria and the wildflowers along the border.</p>
+				  </div>
+				</div>
+				</div>
+
+				<div class="w3-quarter">
+				<div class="w3-card w3-white">
+				  <img src="southportpleasureland.jpg" style="width:100%">
+				  <div class="w3-container">
+				  <h3><b>Southport Pleasureland</b></h3>
+				  <p>Yoou may go to the seaside fun fair at Southport Pleasureland from Liverpool; it is
+				  just a 37-minute drive away. Have a fun-filled day with almost 100 rides,
+				  side shows, cafes, free daily magic shows, an indoor play area, bars, 
+				  performance areas, and an F1 go-kart track. There are a mix of rides for all
+				  levels and ages. Little ones have their own play area too, so no one will be
+				  left out in this amusement park! Your roadtrip to here will be worth it.</p>
+				  </div>
+				</div>
+				</div>
+		    </div>
+			
+			<hr class="NL2">
+			
+		<div class="twoSection">
+		<h1>Getting Here & Around</h1>
+			<!-- First Photo Grid-->
+			<div class="w3-row-padding">
+				<div class="w3-third w3-container w3-margin-bottom">
+				  <img src="selfdrive.jpg"  style="width:100%" class="w3-hover-opacity">
+				  <div class="w3-container w3-white">
+					<p><b>Self-drive</b></p>
+					<p>Liverpool compact size and diversity of landscapes makes it ideal for touring. Major roads between cities and country towns are well signposted.</p>
+					<p> Rules in the Liverpool : </p>
+					<p>You must be able to read a vehicle number plate, in daylight, from a distance of 20 metres – or 20.5 metres where there’s an old style number plate. And if you need to wear glasses (or contact lenses) to do it, you must wear them at all times while driving.</p>
+					<p>You must obey signs used by school crossing patrols.</p>
+					<p>You must obey all traffic light signals and traffic signs giving orders – and that includes temporary signals & signs.</p>
+					<p>You’re only allowed to flash your headlights to let other road users know that you are there. You could be prosecuted for using them to convey any other message – or to intimidate other road users.</p>
+					<p>Car horns can be used only while your vehicle is moving and you need to warn other road users of your presence. Sounding your horn aggressively can be an offence, and the Highway Code says you must not use it while stationary on the road or when driving in a built-up area between the hours of 11.30pm and 7am – except when another road user poses a danger.</p>
+					<p>All sidelights and rear registration plate lights must be lit between sunset and sunrise.</p>
+					<p>You must not use any lights in a way which would dazzle or cause discomfort to other road users, including pedestrians, cyclists and horse riders</p>
+					<p>It’s against the code to leave a parked vehicle unattended with the engine running or leave a vehicle engine running unnecessarily while the vehicle is stationary on a public road.</p>
+					<p>An obvious one, and one that annoys most of us being overtaken by speeding drivers – you must not exceed the maximum speed limits for the road and for your vehicle. The presence of street lights generally means that there is a 30 mph speed limit, unless otherwise specified</p>
+					<p>That one-way street might look like a tempting short cut, but the Code says you must always travel in the direction indicated by signs.</p>
+					<p>You must not drive on or over a pavement, footpath or bridleway except to gain lawful access to property – or in the case of an emergency.</p>
+					<p>You must not throw anything out of a vehicle, including food, paper or cigarette ends.</p>
+
+					
+				  </div>
+				</div>
+				<div class="w3-third w3-container w3-margin-bottom">
+				  <img src="drivinginliverpool.jpg"  style="width:100%" class="w3-hover-opacity">
+				  <div class="w3-container w3-white">
+					<p><b>Driving In Liverpool</b></p>
+					<p>Liverpool welcomes safe drivers. We want you to have a fantastic holiday in Liverpool and this means staying safe on our roads.Here are some advice :</p>
+					<p>Your journey may take longer than you expect – allow extra time</p>
+					<p>When planning a long drive have a good night's sleep before the trip, especially after a long flight to Australia, and where possible, share the driving with your companions.</p>
+					<p>Wear a seatbelt when travelling in a vehicle.</p>
+					<p>Drive within the limits and to the conditions</p>
+					<p>Keep your eyes on the road, not the scenery. If you want to stop and look at the view, make sure you pull completely off the road in a place that is safe to stop.</p>
+					<p>Drivers are not permitted to use a handheld mobile phone when driving – it's against the law. If you need to make a call or send a text, pull over at a rest area or in a safe place.</p>
+					<p>Get to know the road rules, signs and markings before you drive.</p>
+					<p>Don't drive impaired by drugs or alcohol.</p>
+					<p>Choose the safest vehicle.</p>
+					<p>If driving slowly, pull over where it is safe and let faster traffic pass.</p>
+				  </div>
+				</div>
+				
+				<div class="w3-third w3-container w3-margin-bottom">
+				  <img src="publictransport.jpg"  style="width:100%" class="w3-hover-opacity">
+				  <div class="w3-container w3-white">
+					<p><b>Public Transport</b></p>
+					<p>By Rail. Merseyrail trains run frequently throughout the day across 68 stations in and around the Liverpool area. With 4 city centre underground stations - Lime Street lower level, Liverpool Central, Moorfields and James Street - you can easily get around the city, giving you more time to see everything Liverpool has to offer. Tickets are simple too, with Day Savers for individual day travel and the Merseyrail Family Ticket if you’re all travelling together.Merseyrail have two lines, the Wirral Line and the Northern Line serving as far as Chester on the Wirral Line or Southport on the Northern Line meaning Liverpool can be the base for your trip.</p>
+				  </div>
+				</div>
+		    </div>
+		</div>
+		
+		<hr class="NL3">
+		<div class="extrainfo"
+			<h1><b>Tips about travelling to UK</b></h1>
+			<p>The video below is to help to share some tips to the tourist about travelling to UK</p>
+			
+			<iframe width="1400" height="345" src="https://www.youtube.com/embed/0UT0bKjr4Yk?playlist=0UT0bKjr4Yk&loop=1"></iframe>
+
+		</div>
+		
+		<hr class="NL4">
+		
+		<div class="w3-container w3-center w3-padding-32"> 
+		<h1><b>Useful Information</b></h1>
+		
+			<div class="w3-row">
+
+				<div class="w3-col l8 s12">
+				<!-- Health and Safety -->
+				  <div class="w3-card-4 w3-margin w3-white">
+					<img src="Health&Safety.jpg"  style="width:100%">
+					<div class="w3-container">
+					  <h3><b>Health & Safety</b></h3>
+					</div>
+
+					<div class="w3-container">
+					  <p>Beach safety.Beaches can be dangerous, with rips and undercurrents, so make sure you swim on lifeguard patrolled beaches between the red and yellow flags, and be sun smart.</p>
+					  <p>Bites and Stings safety.For advice on bites and stings, based on your symptoms, visit the Symptom Checker or NHS 111 Online for advice on bites and stings, based on your symptoms, visit the Symptom Checker at healthdirect.gov.au. An emergency involves any of these symptoms: central/crushing chest pain, unconsciousness, a seizure (fit), difficulty breathing or turning blue, badly bleeding, victim of a severe accident. In an emergency, phone triple zero (000) and ask for an ambulance. An emergency involves any of these symptoms: central/crushing chest pain, unconsciousness, a seizure (fit), difficulty breathing or turning blue, badly bleeding, victim of a severe accident.</p>
+					  <p>Emergencies. In an emergency, phone triple nine (999) and ask for an fire, police or ambulance help.</p>
+					  <p>Weather safety. Watch out for natural hazards such as changeable weather conditions in Victoria's alpine regions or remote national parks. Plan your activities and let someone know where you are going and what time you expect to return. Check Liverpool's weather and current warnings on the Liverpool Weather-Mnet Office website.
+					  <div class="w3-row">
+					  </div>
+					</div>
+				  </div>
+				  <hr>
+
+				  <!-- Quarantine and Customs -->
+				  <div class="w3-card-4 w3-margin w3-white">
+				  <img src="Quarantine&Custom.jpg"  style="width:100%">
+					<div class="w3-container">
+					  <h3><b>Quarantine & Customs</b></h3>
+					</div>
+
+					<div class="w3-container">
+					  <p>Domestic Quarantine. When travelling in regional Liverpool, please heed local advice about carrying food, as quarantine regulations restrict travellers from carrying plants and fruit into some regional areas. Affected areas are signposted, have roadside quarantine fruit disposal bins in place, and may stage quarantine roadblocks.</p>
+					  <p>Fruit Fly. Fruit flies lay eggs in fruit and vegetables, rendering produce inedible and devastating crops. Fruit fly can be spread by travellers carrying infested fruit into or between horticultural regions of Liverpool. Please help protect Victoria's horticulture by heeding all local advice about travelling with fruit, and by disposing of fruit in quarantine bins as necessary.</p>
+					  <p>UK Custom Regulations.You can bring some goods from abroad without having to pay UK tax or ‘duty’ (customs charges), as long as they’re for your own use. It depends on the type of goods you're bringing in and where you're travelling from.
+					  If you are travelling to the UK from the EU, you can bring an unlimited amount of most goods (such as cigarettes and alcohol) for your own use without paying tax or duty. This legislation does not apply to some new member states. Check the full duty-free regulations.
+					  If you are travelling to the UK from outside the EU, you're allowed to bring a certain amount of goods such as alcohol, tobacco, perfume, souvenirs for your own use or as gifts. Your personal allowance includes up to 1 litre of spirits, 200 cigarettes and up to £390-worth of other goods. 
+					  Find out more about UK customs regulations on the official UK government website.</p>
+					 <div class="w3-row">
+					  </div>
+					</div>
+				  </div>
+				
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!-- footer -->
+		<div class="w3-row w3-section">
+		  <div class="w3-third w3-container w3-black w3-large" style="height:400px">
+			<h2>Schedule With Us</h2>
+			<p><i class="fa fa-map-marker" style="width:30px"></i> 120 Ribblers Ln, Liverpool L32 7RB, UK</p>
+			<p><i class="fa fa-phone" style="width:30px"></i> Phone:  + 01 234 567 88</p>
+			<p><i class="fa fa-envelope" style="width:30px"> </i> Email: derrick@gmail.com</p>
+		  </div>
+		  <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:400px">
+			<h2>Summary About Us</h2>
+			<p>Visit2day company is tourist oriented company where promote and introduce our best service as a guidance for Liverpool tourist who has the keen of interest  visiting Liverpool.</p>
+			<p>Visit2day company offers a various of places for tourist to visit for 2 day and help them meet their standard of satisfaction and go beyond their expectation.</p>
+		  </div>
+		  <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:400px">
+			<h2>Follow Us</h2>
+			<i class="w3-xlarge fa fa-facebook-official"></i><br>
+			<i class="w3-xlarge fa fa-pinterest-p"></i><br>
+			<i class="w3-xlarge fa fa-twitter"></i><br>
+			<i class="w3-xlarge fa fa-flickr"></i><br>
+			<i class="w3-xlarge fa fa-linkedin"></i>
+		  </div>
+		</div>
+		<!-- Copyright -->
+		<b><div class="footer-copyright text-center py-3">© Visit2Day2019 Copyright</div></b>
+	</body>
+</html>  
+			
+
+
+

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Discover Liverpool</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		/* For styling specific to this page */
+		<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+		
+		body, html {
+		  height: 100%;
+		  line-height: 1.8;
+		  font-size: 15px;
+		}
+		/* Full height image header */
+		.bgimg-3 {
+		  background-position: center;
+		  background-size: cover;
+		  background-image: url("DL222.jpg");
+		  min-height: 100%;
+		}
+		.w3-greyscale-min, .w3-grayscale-min {
+			filter: none;
+		}
+		.w3-bar .w3-button {
+			padding: 16px;
+		}
+		.map-container-5{
+			overflow: hidden;
+			padding-bottom: 56.25%;
+			position: relative;
+			height: 0;
+		}
+		.map-container-5 iframe{
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+		}
+		.Line1 {
+			border: 1px solid black;
+		}
+		
+		
+		*,
+		*::before,
+		*::after {
+		  box-sizing: border-box;
+		}
+		.Mycard {
+		  color: #999999;
+		  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		  font-style: normal;
+		  font-weight: 400;
+		  letter-spacing: 0;
+		  padding: 1rem;
+		  text-rendering: optimizeLegibility;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  -moz-font-feature-settings: "liga" on;
+		  text-align: justify;
+		}
+		img {
+		  height: auto;
+		  max-width: 100%;
+		  vertical-align: middle;
+		}
+		.cards {
+		  display: flex;
+		  flex-wrap: wrap;
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+		.cards__item {
+		  display: flex;
+		  padding: 1rem;
+		}
+		@media (min-width: 40rem) {
+		  .cards__item {
+			width: 50%;
+		  }
+		}
+		@media (min-width: 56rem) {
+		  .cards__item {
+			width: 33.3333%;
+		  }
+		}
+		.card {
+		  background-color: white;
+		  border-radius: 0.25rem;
+		  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+		  display: flex;
+		  flex-direction: column;
+		  overflow: hidden;
+		}
+		.card:hover .card__image {
+		  -webkit-filter: contrast(100%);
+				  filter: contrast(100%);
+		}
+		.card__content {
+		  display: flex;
+		  flex: 1 1 auto;
+		  flex-direction: column;
+		  padding: 1rem;
+		}
+		.card__image {
+		  background-position: center center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  border-top-left-radius: 0.25rem;
+		  border-top-right-radius: 0.25rem;
+		  -webkit-filter: contrast(70%);
+				  filter: contrast(70%);
+		  overflow: hidden;
+		  position: relative;
+		  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		}
+		.card__image::before {
+		  content: "";
+		  display: block;
+		  padding-top: 56.25%;
+		}
+		@media (min-width: 40rem) {
+		  .card__image::before {
+			padding-top: 66.6%;
+		  }
+		}
+		.card__image--botanicgarden {
+		  background-image: url("BotanicGarden.jpg");
+		}
+		.card__image--sthelens {
+		  background-image: url("StHelens.jpg");
+		}
+		.card__image--waterfront {
+		  background-image: url("Waterfront.jpg");
+		}
+		.card__image--ormskirk {
+		  background-image: url("Ormskirk.jpg");
+		}
+		.card__image--seftonpark {
+		  background-image: url("Seftonpark.jpeg");
+		}
+		.card__image--stanleypark {
+		  background-image: url("Stanleypark.jpg");
+		}
+		.card__title {
+		  color: #696969;
+		  font-size: 1.25rem;
+		  font-weight: 300;
+		  letter-spacing: 2px;
+		  text-transform: uppercase;
+		}
+		.card__text {
+		  flex: 1 1 auto;
+		  font-size: 0.875rem;
+		  line-height: 1.5;
+		  margin-bottom: 1.25rem;
+		}
+		
+		.Line2 {
+			border: 1px solid black;
+		}
+		
+		* {box-sizing: border-box}
+		body {font-family: Verdana, sans-serif; margin:0}
+		.mySlides {display: none}
+		img {vertical-align: middle;}
+
+		/* Slideshow container */
+		.slideshow-container {
+		  max-width: 1000px;
+		  position: relative;
+		  margin: auto;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
+
+		/* Caption text */
+		.text {
+		  color: #f2f2f2;
+		  font-size: 15px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  bottom: 8px;
+		  width: 100%;
+		  text-align: center;
+		}
+
+		/* Number text (1/4 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+		  cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+
+		.active, .dot:hover {
+		  background-color: #717171;
+		}
+
+		/* Fading animation */
+		.fade {
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .prev, .next,.text {font-size: 11px} 
+		}
+
+
+		
+		</style>
+	</head>
+	<body>
+		<!-- Navbar (sit on top) -->
+		<div class="w3-top">
+		  <div class="w3-bar w3-white w3-card" id="myNavbar">
+			<a class="w3-bar-item w3-button w3-wide" href="index.html"><img src="Logo.png" width="75" height="75" alt="" /></a>
+			
+			<!-- Right-sided navbar links -->
+			<div class="w3-right w3-hide-small">
+			  <a href="inspiration.html" class="w3-bar-item w3-button"><i class="fa fa-star"></i>INSPIRATION</a>
+			  <a href="discover liverpool.html" class="w3-bar-item w3-button"><i class="fa fa-cc-discover"></i> DISCOVER LIVERPOOL</a>
+			  <a href="liverpool essential.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> LIVERPOOL ESSENTIAL</a>
+			  <a href="plan.html" class="w3-bar-item w3-button"><i class="fa fa-pencil"></i>PLAN</a>
+			</div>
+		 
+			
+			
+			<!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+		</div>
+		
+		
+		<!-- Header with full-height image -->
+		<header class="bgimg-3 w3-display-container w3-grayscale-min" id="discover liverpool">
+		  <div class="w3-display-left w3-text-white" style="padding:48px">
+			<span class="w3-jumbo w3-hide-small">Liverpool's Region</span><br>
+			<span class="w3-xxlarge w3-hide-large w3-hide-medium">Look up ahead for more magnificent view</span><br>
+			<span class="w3-large">Discover the diversity and beauty of Liverpool.</span>
+			<p><span class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Lets Go On Vacation 2day</a></p>
+		  </div> 
+		  <div class="w3-display-bottomleft w3-text-black w3-large" style="padding:24px 48px">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+		  </div> 
+		</header>
+		
+		<audio controls>
+		  <source src="Vacation.mp3">
+		</audio>
+		
+		<div class="w3-container" style="padding:128px 16px" id="discover liverpool">
+			<h3 class="w3-center">Map</h3>
+			
+			<div class="row">
+
+			  <!--Grid column-->
+			    <div class="col-md-6 mb-4">
+
+				<!--Card-->
+				<div class="card card-cascade narrower">
+
+					<!--Card image-->
+					<div class="view view-cascade gradient-card-header blue-gradient">
+						<h5 class="mb-0">A view of Liverpool, United Kingdom map</h5>
+					</div>
+					<!--/Card image-->
+
+					<!--Card content-->
+					<div class="card-body card-body-cascade text-center">
+
+						<!--Google map-->
+						<div id="map-container-google-8" class="z-depth-1-half map-container-5" style="height: 300px">
+						  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139914.6496738365!2d-3.056141482914098!3d53.41209544256948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487adf8a647060b7%3A0x42dc046f3f176e01!2sLiverpool%2C+UK!5e1!3m2!1sen!2smy!4v1553951772779!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>"
+						</div>
+
+					</div>
+					  <!--/.Card content-->
+
+				</div>
+				<!--/.Card-->
+
+			    </div>
+		    </div>
+		</div>
+		<hr class="Line1">
+		
+		
+		
+		<div class="Mycard">
+		<h1><b>Explore Liverpool Region</b></h1>
+
+			<ul class="cards">
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--botanicgarden"></div>
+				  <div class="card__content">
+					<div class="card__title">Botanic Garden</div>
+					<p class="card__text">Explore the Botanical world just two miles north of Southport,
+					where you’ll find the historic village of Churchtown, home to the Botanic Gardens.
+					Opened in the 19th century, these beautiful Victorian gardens are positively 
+					bursting with pretty arboretum, floral splendour and colourful displays, particularly
+					beautiful in the summer months. Within the gardens you’ll find plenty to see and do, 
+					with its stunning lake and winding pathways, fernery (with a unique collection of
+					indoor ferns), aviary, café and play area. The park is usually open for seven days a week 
+					throughout the year. You can easily access the gardens by train from Liverpool 
+					City Centre to Southport. Its a very calm and peace place to relax our mind fromm
+					the hustle and bustle of city life.</p>
+					
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--sthelens"></div>
+				  <div class="card__content">
+					<div class="card__title">St Helens</div>
+					<p class="card__text">It is located midway between Liverpool and Manchester, whereby St Helens is a good
+					base from which to explore the whole of the North West and beyond it. The biggest St Helens
+					attraction in every sense is Dream - the iconic 20-metre high internationally important
+					artwork which is doone by artist Jaume Plensa, situated on top of Sutton Manor overlooking the M62. The sports
+					enthusiasts can experience the enjoyment of premier year-round horseracing at Haydock Park
+					Racecourse or enjoy action-packed rugby at the home of the most successful side in the Super
+					League  of history, Saints.Discover the borough's unique heritage at the multi-award winning
+					attraction The World of Glass, or visit the fascinating North West Museum of Road Transport
+					with its extensive collection of vintage road vehicles</p>
+					
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--waterfront"></div>
+				  <div class="card__content">
+					<div class="card__title">Waterfront</div>
+					<p class="card__text">The Cunard’s Three Queens may have grabbed the headlines when they met in an 
+					historic event on the Mersey in 2015, but they’re not the only ships that have been getting the
+					attention on the river. The Ferry ‘Cross the Mersey has been famous since Gerry and the 
+					Pacemakers immortalised it in the heyday of Merseybeat. In April 2015, Sir Peter Blake
+					– the artist behind the cover of Sgt. Pepper’s Lonely Hearts Club Band – was commissioned by
+					the Liverpool Biennial and Tate Liverpool to ‘dazzle’  which is one of the ferries, Snowdrop. The
+					result is a magnificent psychedelic design that can be seen crossing the river throughout the day
+					which is on the River Explorer cruise and it is a must-do things when visiting the city. The ticket
+					which also includes entry to the U-Boat Story attraction at Woodside ferry terminal.</p>
+				   
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--ormskirk"></div>
+				  <div class="card__content">
+					<div class="card__title">Ormskirk</div>
+					<p class="card__text">Ormskirk is a historic market town steeped in character, situated only a
+					short train ride from Liverpool City Centre. Boasting a mix of independent shops, restaurants, 
+					cafes and pubs, it even has its own art gallery. Each Thursday and Saturday the streets bustle
+					with life as the town centre hosts Ormskirk's traditional outdoor Market, which has been 
+					running since 1286! In and around Ormskirk are a host of attractions, as well as walking & 
+					cycling routes to explore. See over 100 different types of rare and endangered water-birds 
+					at Martin Mere, handle animals at Farmer Ted's and uncover the history of Rufford Old Hall.
+					Enjoy country pubs and delicious eateries including the Grade II listed and 2 Michelin Starred
+					Moor Hall. Ormskirk and West Lancashire has so much to explore, why not discover it more!</p>
+					
+				  </div>
+				</div>
+			  </li>
+			   <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--seftonpark"></div>
+				  <div class="card__content">
+					<div class="card__title">Sefton Park</div>
+					<p class="card__text">Sefton Park in Liverpool is arguably the famous and most loved by locals in Liverpool.
+					It is classified as a Grade which  listed park by English Heritage, the magnificent 200-acre park features a type of 
+					boating lake, some replica statues of Eros and Peter Pan and a café. Spring is a particularly good time
+					to visit, with golden daffodils and carpets of bluebells. The park is also home to the famous 
+					Sefton Park Palm House, a beautiful glass-panelled building that has been restored to its former 
+					glory and now hosts weddings, corporate events and musical shows. Events taking place in Sefton
+					Park include Liverpool International Music Festival and Liverpool Food and Drink Festival. 
+					This spectacular 235 acre park is a Grade 1 historic park located in the Sefton Park district of Liverpool.
+					It is a Green Flag and Green Heritage which is awarded site with beautiful features and monuments.</p>
+					
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--stanleypark"></div>
+				  <div class="card__content">
+					<div class="card__title">Stanley Park</div>
+					<p class="card__text"> Stanley Park is a 110-acre, Grade II listed green space just north of Liverpool
+					city centre. Dating from 1870, the park is famous for dividing the home grounds of the two Premiership
+					football clubs; Anfield, home of Liverpool Football Club and Goodison Park, home of Everton Football
+					Club. The park has fishing lakes and a play area, and numerous historical features including, most
+					notably, the Grade II listed Isla Gladstone conservatory. Dating from the Victorian era, the Isla
+					Gladstone has been completely restored and is now a magnificent example of its type. It plays host to 
+					weddings, corporate events and even matchday hospitality for Liverpool Football Club. It is Located
+					between Anfield Liverpool FA n Everton FA. A large park, hugh lake with ducks, white swans n a few 
+					grey swans with black head. A playground available. Nice gardens with beautiful flowers.</p>
+				  </div>
+				</div>
+			  </li>
+			  
+			</ul>
+	    </div>
+		<hr class="Line2">
+		
+		
+		
+		<div class="Myslide">
+			<h1> Highlight of liverpool attraction</h1>
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <div class="numbertext">1 / 4</div>
+					  <img src="Theaters.jpg" style="width:100%">
+					  <div class="text">Theater</div>
+					  <p><b>Theatres</b></p>
+					  <p>It is famed for its rich history. Liverpool is home to many world famous attractions.
+						Liverpool’s attractions and buildings are commonly and widely acknowledged among the greatest
+						examples which is in the world of their respective styles, such as the Cunard Building, 
+						the Port of Liverpool Building and the Royal Liver Building which is collectively known
+						as the Three Graces. In 2004, there are many areas of the Liverpool city centre were 
+						granted as a World Heritage Site status by UNESCO which is divided into six separate 
+						locations, including the Pier Head, Albert Dock and William Brown Street, where 
+						over here you will find many of Liverpool’s most iconic architectural landmarks with 
+						beautiful sculpture and views.</p>
+					  
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">2 / 4</div>
+					  <img src="LiverpoolMuseums.jpg" style="width:100%">
+					  <div class="text">Museums</div>
+					  <p><b>Museums</b></p>
+					  <p>Liverpool has one of the most impressive collections of museums and art galleries
+					  in Europe. Featuring everything from maritime to music, modern to classical art,it’s
+					  easy to find somewhere that interests you. It opens in 2011 in a beautiful waterfront 
+					  building area. The Museum of Liverpool is the UK’s first museum which is dedicated to
+					  the history of a city. Explore how Liverpool’s port, people and its rich history have shaped the
+					  city. Head to the Albert Dock and discover more about the companies, people and ships
+					  that had such a profound impact on the city at the Merseyside Maritime Museum and 
+					  International Slavery Museum.</p>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">3 / 4</div>
+					  <img src="LiverpoolStadium.jpg" style="width:100%">
+					  <div class="text">Sports : Liverpool Stadium</div>
+					  <p><b/> Sports : Liverpool Stadium</b></p>
+					  <p>It’s impossible to visit Liverpool without stepping into the world of football 
+					  with two of the UK’s most famous football clubs right on our doorstep! With Liverpool
+					  stadium tours available at Anfield and Goodison Park tours  for Everton, you’ll never
+					  walk alone when you visit the homes of your sporting heroes.</p>
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">4 / 4</div>
+					  <img src="aintreeracecourse.jpg" style="width:100%">
+					  <div class="text">Sports : Aintree Racecourse</div>
+					  <p><b>Sports : Aintree Racecourse</b></p>
+					  <p> Not forgetting that  the grandeur of Aintree Racecourse and its annual Grand National
+					  event?! So many history has been made here with legendary runners and the riders visiting
+					  year on year. Whether you’re cheering on your favourite racer, or rubbing shoulders
+					  in your finery at Ladies’ Day, you’re in for a day that you won’t forget! This was a very well 
+					  organied race meet with a lots of general parking available, plenty of places to eat and
+					  drink and as expected, a wide variety of bookmakers to take your bets. This is a place 
+					  where it be a fun day outfor anyone.</p>
+					  
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+					<br>
+
+					<div style="text-align:center">
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					  <span class="dot" onclick="currentSlide(4)"></span> 
+					</div>
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			  }
+		</script>
+
+		
+		<!-- footer -->
+		<div class="w3-row w3-section">
+		  <div class="w3-third w3-container w3-black w3-large" style="height:400px">
+			<h2>Schedule With Us</h2>
+			<p><i class="fa fa-map-marker" style="width:30px"></i> 120 Ribblers Ln, Liverpool L32 7RB, UK</p>
+			<p><i class="fa fa-phone" style="width:30px"></i> Phone:  + 01 234 567 88</p>
+			<p><i class="fa fa-envelope" style="width:30px"> </i> Email: derrick@gmail.com</p>
+		  </div>
+		  <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:400px">
+			<h2>Summary About Us</h2>
+			<p>Visit2day company is tourist oriented company where promote and introduce our best service as a guidance for Liverpool tourist who has the keen of interest  visiting Liverpool.</p>
+			<p>Visit2day company offers a various of places for tourist to visit for 2 day and help them meet their standard of satisfaction and go beyond their expectation.</p>
+		  </div>
+		  <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:400px">
+			<h2>Follow Us</h2>
+			<i class="w3-xlarge fa fa-facebook-official"></i><br>
+			<i class="w3-xlarge fa fa-pinterest-p"></i><br>
+			<i class="w3-xlarge fa fa-twitter"></i><br>
+			<i class="w3-xlarge fa fa-flickr"></i><br>
+			<i class="w3-xlarge fa fa-linkedin"></i>
+		  </div>
+		</div>
+		<!-- Copyright -->
+		<b><div class="footer-copyright text-center py-3">© Visit2Day2019 Copyright</div></b>
+	</body>
+</html>
